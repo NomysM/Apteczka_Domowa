@@ -10,7 +10,7 @@ public class UstawieniaApteczki
     public int minIlosc;
     private static UstawieniaApteczki instance;
 
-    private UstawieniaApteczki()
+    public UstawieniaApteczki()
     {
         minIlosc = 2;
     }
