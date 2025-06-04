@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 public class Lek
 {
-    public string nazwa;
-    public string opis;
-    public DateTime dataWaznosci;
-    public int ilosc;
+    public string nazwa { get; set; }
+    public string opis { get; set; }
+    public DateTime dataWaznosci { get; set; }
+    public int ilosc { get; set; }
 
     public Lek(string nazwa, string opis, DateTime dataWaznosci, int ilosc)
     {

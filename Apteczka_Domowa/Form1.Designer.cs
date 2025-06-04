@@ -39,6 +39,7 @@
             btnDodaj = new Button();
             btnZapisz = new Button();
             listBoxLekow = new ListBox();
+            btnWczytaj = new Button();
             ((System.ComponentModel.ISupportInitialize)numIlosc).BeginInit();
             SuspendLayout();
             // 
@@ -137,11 +138,22 @@
             listBoxLekow.Size = new Size(250, 94);
             listBoxLekow.TabIndex = 10;
             // 
+            // btnWczytaj
+            // 
+            btnWczytaj.Location = new Point(193, 165);
+            btnWczytaj.Name = "btnWczytaj";
+            btnWczytaj.Size = new Size(75, 23);
+            btnWczytaj.TabIndex = 11;
+            btnWczytaj.Text = "Wczytaj";
+            btnWczytaj.UseVisualStyleBackColor = true;
+            btnWczytaj.Click += btnWczytaj_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(706, 450);
+            Controls.Add(btnWczytaj);
             Controls.Add(listBoxLekow);
             Controls.Add(btnZapisz);
             Controls.Add(btnDodaj);
@@ -174,5 +186,6 @@
         private Button btnDodaj;
         private Button btnZapisz;
         private ListBox listBoxLekow;
+        private Button btnWczytaj;
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 public class UstawieniaApteczki
 {
-    public int minIlosc;
+    public int minIlosc { get; set; }
     private static UstawieniaApteczki instance;
 
     public UstawieniaApteczki()

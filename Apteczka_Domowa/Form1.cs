@@ -60,5 +60,25 @@ namespace Apteczka_Domowa
             File.WriteAllText("listaLekow.json", json);
             MessageBox.Show("Lista leków zosta³a zapisana.");
         }
+
+        private void btnWczytaj_Click(object sender, EventArgs e)
+        {
+            if(File.Exists("listaLekow.json"))
+            {
+                string json = File.ReadAllText("listaLekow.json");
+
+                listaLekow = JsonSerializer.Deserialize<List<Lek>>(json);
+
+                listBoxLekow.Items.Clear();
+                foreach (Lek n in listaLekow)
+                {
+                    listBoxLekow.Items.Add(n);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak pliku z list¹ leków.");
+            }
+        }
     }
 }
