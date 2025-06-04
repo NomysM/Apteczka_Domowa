@@ -40,6 +40,7 @@
             btnZapisz = new Button();
             listBoxLekow = new ListBox();
             btnWczytaj = new Button();
+            btnPrzeterminowane = new Button();
             ((System.ComponentModel.ISupportInitialize)numIlosc).BeginInit();
             SuspendLayout();
             // 
@@ -148,11 +149,22 @@
             btnWczytaj.UseVisualStyleBackColor = true;
             btnWczytaj.Click += btnWczytaj_Click;
             // 
+            // btnPrzeterminowane
+            // 
+            btnPrzeterminowane.Location = new Point(288, 12);
+            btnPrzeterminowane.Name = "btnPrzeterminowane";
+            btnPrzeterminowane.Size = new Size(150, 23);
+            btnPrzeterminowane.TabIndex = 12;
+            btnPrzeterminowane.Text = "Pokaż przeterminowane";
+            btnPrzeterminowane.UseVisualStyleBackColor = true;
+            btnPrzeterminowane.Click += btnPrzeterminowane_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(706, 450);
+            Controls.Add(btnPrzeterminowane);
             Controls.Add(btnWczytaj);
             Controls.Add(listBoxLekow);
             Controls.Add(btnZapisz);
@@ -187,5 +199,6 @@
         private Button btnZapisz;
         private ListBox listBoxLekow;
         private Button btnWczytaj;
+        private Button btnPrzeterminowane;
     }
 }

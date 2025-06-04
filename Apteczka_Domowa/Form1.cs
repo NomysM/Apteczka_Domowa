@@ -63,7 +63,7 @@ namespace Apteczka_Domowa
 
         private void btnWczytaj_Click(object sender, EventArgs e)
         {
-            if(File.Exists("listaLekow.json"))
+            if (File.Exists("listaLekow.json"))
             {
                 string json = File.ReadAllText("listaLekow.json");
 
@@ -78,6 +78,23 @@ namespace Apteczka_Domowa
             else
             {
                 MessageBox.Show("Brak pliku z list¹ leków.");
+            }
+        }
+
+        private void btnPrzeterminowane_Click(object sender, EventArgs e)
+        {
+            var przeterminowane = listaLekow
+                .Where(l => l.dataWaznosci < DateTime.Now).ToList();
+
+            listBoxLekow.Items.Clear();
+            foreach (Lek n in przeterminowane)
+            {
+                listBoxLekow.Items.Add(n);
+            }
+
+            if (przeterminowane.Count == 0)
+            {
+                MessageBox.Show("Brak przeterminowanych leków.");
             }
         }
     }
