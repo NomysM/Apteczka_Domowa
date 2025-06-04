@@ -113,8 +113,9 @@
             btnDodaj.Name = "btnDodaj";
             btnDodaj.Size = new Size(75, 23);
             btnDodaj.TabIndex = 8;
-            btnDodaj.Text = "Dodaj lek";
+            btnDodaj.Text = "Dodaj";
             btnDodaj.UseVisualStyleBackColor = true;
+            btnDodaj.Click += btnDodaj_Click;
             // 
             // btnZapisz
             // 
@@ -124,21 +125,23 @@
             btnZapisz.TabIndex = 9;
             btnZapisz.Text = "Zapisz";
             btnZapisz.UseVisualStyleBackColor = true;
+            btnZapisz.Click += btnZapisz_Click;
             // 
             // listBoxLekow
             // 
+            listBoxLekow.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listBoxLekow.FormattingEnabled = true;
             listBoxLekow.ItemHeight = 15;
             listBoxLekow.Location = new Point(444, 15);
             listBoxLekow.Name = "listBoxLekow";
-            listBoxLekow.Size = new Size(344, 94);
+            listBoxLekow.Size = new Size(250, 94);
             listBoxLekow.TabIndex = 10;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(706, 450);
             Controls.Add(listBoxLekow);
             Controls.Add(btnZapisz);
             Controls.Add(btnDodaj);
