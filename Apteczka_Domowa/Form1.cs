@@ -114,6 +114,7 @@ namespace Apteczka_Domowa
                 
                 if (wybranyLek.ilosc == 0)
                 {
+                    listaLekow.Remove(wybranyLek);
                     MessageBox.Show("Uwaga: Lek siê skoñczy³!!!");
                 }
 
