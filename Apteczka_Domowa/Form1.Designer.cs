@@ -41,6 +41,7 @@
             listBoxLekow = new ListBox();
             btnWczytaj = new Button();
             btnPrzeterminowane = new Button();
+            btnZmniejszIlosc = new Button();
             ((System.ComponentModel.ISupportInitialize)numIlosc).BeginInit();
             SuspendLayout();
             // 
@@ -136,7 +137,7 @@
             listBoxLekow.ItemHeight = 15;
             listBoxLekow.Location = new Point(444, 15);
             listBoxLekow.Name = "listBoxLekow";
-            listBoxLekow.Size = new Size(250, 94);
+            listBoxLekow.Size = new Size(428, 94);
             listBoxLekow.TabIndex = 10;
             // 
             // btnWczytaj
@@ -159,11 +160,22 @@
             btnPrzeterminowane.UseVisualStyleBackColor = true;
             btnPrzeterminowane.Click += btnPrzeterminowane_Click;
             // 
+            // btnZmniejszIlosc
+            // 
+            btnZmniejszIlosc.Location = new Point(363, 47);
+            btnZmniejszIlosc.Name = "btnZmniejszIlosc";
+            btnZmniejszIlosc.Size = new Size(75, 23);
+            btnZmniejszIlosc.TabIndex = 13;
+            btnZmniejszIlosc.Text = "Zużyj";
+            btnZmniejszIlosc.UseVisualStyleBackColor = true;
+            btnZmniejszIlosc.Click += btnZmniejszIlosc_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(706, 450);
+            ClientSize = new Size(884, 450);
+            Controls.Add(btnZmniejszIlosc);
             Controls.Add(btnPrzeterminowane);
             Controls.Add(btnWczytaj);
             Controls.Add(listBoxLekow);
@@ -200,5 +212,6 @@
         private ListBox listBoxLekow;
         private Button btnWczytaj;
         private Button btnPrzeterminowane;
+        private Button btnZmniejszIlosc;
     }
 }

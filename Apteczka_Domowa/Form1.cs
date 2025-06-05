@@ -97,5 +97,43 @@ namespace Apteczka_Domowa
                 MessageBox.Show("Brak przeterminowanych leków.");
             }
         }
+
+        private void btnZmniejszIlosc_Click(object sender, EventArgs e)
+        {
+            if (listBoxLekow.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszê wybraæ lek z listy.");
+                return;
+            }
+
+            Lek wybranyLek = (Lek)listBoxLekow.SelectedItem;
+
+            if (wybranyLek.ilosc > 0)
+            {
+                wybranyLek.ilosc--;
+                
+                if (wybranyLek.ilosc == 0)
+                {
+                    MessageBox.Show("Uwaga: Lek siê skoñczy³!!!");
+                }
+
+                OdswiezListe();
+
+            }
+            else
+            {
+                MessageBox.Show("Nie posiadasz ju¿ tego leku.");
+            }
+        }
+
+        private void OdswiezListe()
+        {
+            listBoxLekow.Items.Clear();
+
+            foreach (Lek n in listaLekow)
+            {
+                listBoxLekow.Items.Add(n);
+            }
+        }
     }
 }
